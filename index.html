@@ -80,18 +80,7 @@
 </head>
 <body>
 
-<div id="mod-popup" class="popup-overlay">
-    <div class="popup-box">
-        <h2>Dynamons World</h2>
-        <p>Client Modded by <b>DDatiOS</b></p>
-        <p style="margin-top: -10px; font-size: 14px; color: #ffffff;">
-            Discord: <b>ddatios._.</b>
-        </p>
-        <button id="close-popup-btn">OK</button>
-    </div>
-</div>
-
-<div id="version" style="z-index: 999; position: absolute; color: white; right: 10px; top: 10px; opacity: 0.5;">v1.12.08</div>
+<div id="version" style="z-index: 999; position: absolute; color: white; right: 10px; top: 10px; opacity: 0.5;">version 1.12.13</div>
 <div id="content"></div>
 
 <script type="text/javascript">
@@ -99,25 +88,6 @@
 		var s = document.createElement('script'); s.setAttribute('src', src + '?v=' + buster);
 		if (typeof callback === 'function') { s.onload = callback; } document.body.appendChild(s);
 	}
-
-    window.addEventListener('load', function() {
-        const popup = document.getElementById('mod-popup');
-        const popupBox = document.querySelector('.popup-box');
-        const closeBtn = document.getElementById('close-popup-btn');
-
-        setTimeout(function() {
-            popup.style.opacity = '1';
-            popupBox.style.transform = 'scale(1)';
-        }, 100);
-
-        closeBtn.addEventListener('click', function() {
-            popup.style.opacity = '0';
-            popupBox.style.transform = 'scale(0.9)';
-            setTimeout(function() {
-                popup.style.display = 'none';
-            }, 300);
-        });
-    });
 
 	document.addEventListener("deviceready", function() {
 		addScript('version.js', Date.now(), function () {
